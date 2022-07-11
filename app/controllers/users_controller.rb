@@ -9,10 +9,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @pagy, @users = pagy User.order_by("id", "ASC"), items: Settings.index.items
+    @pagy, @users = pagy User.order_by("ASC"), items: Settings.index.items
   end
 
-  def show; end
+  def show
+    @pagy, @microposts = pagy @user.microposts
+  end
 
   def create
     @user = User.new user_params
@@ -33,7 +35,7 @@ class UsersController < ApplicationController
       flash[:success] = t ".update_message"
       redirect_to @user
     else
-      flash[:danger] = t ".update_fail"
+      flash.now[:danger] = t ".update_fail"
       render :edit
     end
   end

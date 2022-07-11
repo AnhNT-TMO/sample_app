@@ -1,14 +1,31 @@
 <title><%= provide :title, t(".provide_title") %></title>
-<div class="center jumbotron">
-  <h1><%= t ".welcome" %></h1>
-  <h2>
-    <%= t ".main_page_first" %>
-    <%= link_to t(".rails_href"), Settings.home.tutorial_ruby_on_rails,target: :_blank %>
-    <%= t ".main_page_last" %>
-  </h2>
-  <% unless logged_in? %>
-    <%= link_to t(".button_title"), signup_path, class: "btn btn-lg btn-primary" %>
-  <% end %>
-</div>
-<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
-  Settings.home.tutorial_rails, target: :_blank %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form" %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3><%= t".feed" %></h3>
+      <%= render "shared/feed" %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1> <%= t(".welcome") %> </h1>
+    <h2>
+      <%= t(".main_page_first") %>
+      <%= link_to t(".rails_href"), Settings.home.tutorial_ruby_on_rails,target: :_blank %>
+      <%= t(".main_page_last") %>
+    </h2>
+    <% unless logged_in? %>
+      <%= link_to t(".button_title"), signup_path, class: "btn btn-lg btn-primary" %>
+    <% end %>
+  </div>
+  <%= link_to image_tag("rails.svg"),
+    Settings.home.tutorial_rails, target: :_blank %>
+<% end %>
