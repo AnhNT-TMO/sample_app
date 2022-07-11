@@ -99,8 +99,15 @@ vi:
       sign_up: "Đăng ký ngay!"
       new_user: "Người mới? "
       forgot_password: "Quên mật khẩu"
+    create:
+      denied_account: "Tài khoản chưa xác minh"
+      alert: "Sai user hoặc password"
   password_resets:
     new:
       title: "Quên mật khẩu"
       email: "Email"
       submit: "Gửi"
+  account_activations:
+    edit:
+      activate_success: "Xác minh thành công, vui lòng đăng nhập"
+      activation_button: "Xác minh"

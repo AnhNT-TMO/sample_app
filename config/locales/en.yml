@@ -73,7 +73,6 @@ en:
       update_message: "Updated!"
     create:
       alert: "Check your mail please!!!"
-
   layouts:
     header:
       title: "Sample App"
@@ -100,8 +99,15 @@ en:
       sign_up: "Sign up now!"
       new_user: "New User? "
       forgot_password: "Forgot Password"
+    create:
+      denied_account: "Denied Account"
+      alert: "Wrong username or password"
   password_resets:
     new:
       title: "Forgot Password"
       email: "Email"
       submit: "Submit"
+  account_activations:
+    edit:
+      activate_success: "Congtulations, please log in"
+      activation_button: "Activate"
