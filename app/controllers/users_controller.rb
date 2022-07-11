@@ -33,6 +33,7 @@ class UsersController < ApplicationController
       flash[:success] = t ".update_message"
       redirect_to @user
     else
+      flash[:danger] = t ".update_fail"
       render :edit
     end
   end

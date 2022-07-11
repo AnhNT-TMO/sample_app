@@ -2,6 +2,7 @@ en:
   auths:
     mail:
       subject: "Welcome! This is email to confirm register"
+      password_reset_subject: "Reset Password email"
   controller:
     users_controller:
       alert: "Welcome to Sample App"
@@ -15,6 +16,7 @@ en:
       hello: "Hello: "
       content: "Welcome to the Sample App! Click on the link below to activate your account:"
       title: "Sample App"
+      activation_button: "Activate"
     password_reset:
       title: "Password reset"
       subject: "To reset your password click the link below:"
@@ -107,7 +109,16 @@ en:
       title: "Forgot Password"
       email: "Email"
       submit: "Submit"
+    create:
+      info_mail: "Check mail please!"
+      not_found: "Not found user in this email"
+    edit:
+      password: "Password"
+      password_confirmation: "Confirm password"
+      reset_password_title: "Update password"
+      update_password_button: "Update"
+    update:
+      success_reset: "Update password successful"
   account_activations:
     edit:
       activate_success: "Congtulations, please log in"
-      activation_button: "Activate"

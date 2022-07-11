@@ -76,6 +76,7 @@ Rails.application.configure do
     password: ENV["mail_user_password"],
     address: ENV["mail_address"],
     port: ENV["mail_port"],
+    domain: ENV["mail_domain"],
     authentication: :cram_md5,
     enable_starttls_auto: true
   }
