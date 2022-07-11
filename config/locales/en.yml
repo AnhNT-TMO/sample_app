@@ -75,6 +75,16 @@ en:
       update_message: "Updated!"
     create:
       alert: "Check your mail please!!!"
+    unfollow:
+      unfollow: "Unfollow"
+    follow:
+      follow: "Follow"
+    show_follow:
+      show_follow_title: "Show Follow"
+    following:
+      following_title: "Show Following"
+    followers:
+      follower_title: "Show Follower"
   layouts:
     header:
       title: "Sample App"

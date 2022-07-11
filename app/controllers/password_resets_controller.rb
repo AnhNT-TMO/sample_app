@@ -62,7 +62,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def check_params_user_password
-    return unless params[:user][:password].blank?
+    return if params[:user][:password].present?
 
     @user.errors.add :password, t(".cant_empty")
     render :edit
