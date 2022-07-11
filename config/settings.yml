@@ -15,3 +15,10 @@ user:
   email_min: 20
   email_max: 255
   pass_min: 6
+  gavatar_size: 50
+edit:
+  avatar: "https://en.gravatar.com"
+index:
+  items: 30
+user_helper:
+  gavartar_size: 80

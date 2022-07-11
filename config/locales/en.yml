@@ -1,4 +1,7 @@
 en:
+  auths:
+    mail:
+      subject: "Welcome! This is email to confirm register"
   controller:
     users_controller:
       alert: "Welcome to Sample App"
@@ -7,6 +10,17 @@ en:
   helper:
     application_helper:
       base_title: "Program teach how to using Rails"
+  user_mailer:
+    account_activation:
+      hello: "Hello: "
+      content: "Welcome to the Sample App! Click on the link below to activate your account:"
+      title: "Sample App"
+    password_reset:
+      title: "Password reset"
+      subject: "To reset your password click the link below:"
+      expire: "This link will expire in two hours."
+      content: "If you did not request your password to be reset,
+                please ignore this email and your password will stay as it is."
   static_pages:
     home:
       title: "Sample App"
@@ -30,17 +44,36 @@ en:
   users:
     new:
       new_title: "Register"
+      registered: "Registered? "
+      login: "Login"
+    show:
+      alert: "Welcome to the Sample App!"
+      profile: "Profile"
+    edit:
+      title: "Edit User"
+      heading: "Update your profile"
       name: "Name"
       email: "Email"
       password: "Password"
       confirm_password: "Confirm Password"
-      create_button: "Create my account"
-    show:
-      profile: "Profile"
-      alert_user: "Cannot find user"
+      save_button: "Save Change"
+      change: "Change"
+      alert_correct_user: "Not this user"
+    form:
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      confirm_password: "Confirm Password"
+      save_button: "Save change"
+    user:
+      confirm_dialog: "You sure?"
+    index:
+      index_title: "All Users"
+    update:
+      update_message: "Updated!"
     create:
-      alert_not_save: "User cannot save"
-      alert: "Welcome to Sample App"
+      alert: "Check your mail please!!!"
+
   layouts:
     header:
       title: "Sample App"
@@ -50,6 +83,7 @@ en:
       profile: "Profile"
       settings: "Settings"
       log_out: "Log out"
+      users: "Users"
     application:
       base_title: "Program teach how to using Rails"
     footer:
@@ -65,4 +99,9 @@ en:
       submit: "Log in"
       sign_up: "Sign up now!"
       new_user: "New User? "
-      remember_me: "Remember me"
+      forgot_password: "Forgot Password"
+  password_resets:
+    new:
+      title: "Forgot Password"
+      email: "Email"
+      submit: "Submit"

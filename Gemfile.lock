@@ -124,6 +124,8 @@ GEM
       dry-schema (~> 1.8, >= 1.8.0)
     erubi (1.10.0)
     execjs (2.8.1)
+    faker (2.1.2)
+      i18n (>= 0.8)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -162,6 +164,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.6-x86_64-darwin)
       racc (~> 1.4)
+    pagy (5.10.1)
+      activesupport
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
@@ -318,10 +322,12 @@ DEPENDENCIES
   bootstrap-sass (= 3.4.1)
   capybara (>= 3.26)
   config
+  faker (= 2.1.2)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mysql2 (~> 0.5)
   net-smtp
+  pagy
   prettier
   pry-rails
   puma (~> 5.0)

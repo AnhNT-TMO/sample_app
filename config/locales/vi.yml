@@ -1,4 +1,7 @@
 vi:
+  auths:
+    mail:
+      subject: "Welcome! This is email to confirm register"
   controller:
     users_controller:
       alert: "Chào mừng bạn tới Sample App"
@@ -7,6 +10,17 @@ vi:
   helper:
     application_helper:
       base_title: "Ứng dụng mẫu hướng dẫn Ruby On Rails"
+  user_mailer:
+    account_activation:
+      hello: "Xin chào: "
+      content: "Chào mừng bạn đến với ứng dụng mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
+      title: "Sample App"
+    password_reset:
+      title: "Reset mật khẩu"
+      subject: "Để reset password của bạn, click vào link dưới đây:"
+      expire: "Link này chỉ có hạn trong 2 tiếng tới"
+      content: "Nếu bạn không cần reset mật khẩu,
+                vui lòng bỏ qua mail này, xin cảm ơn."
   static_pages:
     home:
       title: "Sample App"
@@ -30,17 +44,35 @@ vi:
   users:
     new:
       new_title: "Đăng Ký"
+      registered: "Đã đăng ký? "
+      login: "Đăng nhập"
+    show:
+      alert: "Chào mừng bạn tới Sample App!"
+      profile: "Profile"
+    edit:
+      title: "Chỉnh sửa User"
+      heading: "Chỉnh sửa thông tin"
       name: "Tên"
       email: "Email"
       password: "Mật Khẩu"
-      confirm_password: "Xác Nhận Mật Khẩu"
-      create_button: "Tạo tài khoản"
-    show:
-      profile: "Thông tin"
-      alert_user: "Không tìm thấy user"
+      confirm_password: "Xác nhận mật khẩu"
+      save_button: "Lưu thay đổi"
+      change: "Thay đổi"
+      alert_correct_user: "Không phải user này"
+    form:
+      name: "Tên"
+      email: "Email"
+      password: "Mật Khẩu"
+      confirm_password: "Xác nhận mật khẩu"
+      save_button: "Lưu thay đổi"
+    user:
+      confirm_dialog: "Bạn chắc chưa?"
+    index:
+      index_title: "Người dùng"
+    update:
+      update_message: "Đã thay đổi!"
     create:
-      alert_not_save: "Không lưu được user"
-      alert: "Chào mừng bạn tới Sample App"
+      alert: "Kiểm tra mail của bạn nha!!!"
   layouts:
     header:
       title: "Sample App"
@@ -50,6 +82,7 @@ vi:
       profile: "Thông tin"
       settings: "Cài đặt"
       log_out: "Đăng xuất"
+      users: "Người dùng"
     application:
       base_title: "Ứng dụng mẫu hướng dẫn Ruby On Rails"
     footer:
@@ -65,3 +98,9 @@ vi:
       submit: "Đăng nhập"
       sign_up: "Đăng ký ngay!"
       new_user: "Người mới? "
+      forgot_password: "Quên mật khẩu"
+  password_resets:
+    new:
+      title: "Quên mật khẩu"
+      email: "Email"
+      submit: "Gửi"
