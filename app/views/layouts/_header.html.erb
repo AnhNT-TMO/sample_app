@@ -1,12 +1,26 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-   <div class="container">
-      <%= link_to t(".title"), root_path, id: "logo" %>
-      <nav>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t(".home"), root_path %></li>
-          <li><%= link_to t(".help"), help_path %><li>
-          <li><%= link_to t(".login"), help_path %></li>
-        </ul>
-      </nav>
-   </div>
+  <div class="container">
+    <%= link_to t(".title"), root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t(".home"), root_path %></li>
+        <li><%= link_to t(".help"), help_path %></li>
+        <li><% if logged_in? %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= current_user.name %> <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to t(".profile"), "#" %></li>
+              <li><%= link_to t(".settings"), "#" %></li>
+              <li class="divider"></li>
+              <li><%= button_to t(".log_out"), logout_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to t(".login"), login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
 </header>
