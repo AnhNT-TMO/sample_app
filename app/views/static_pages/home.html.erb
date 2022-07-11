@@ -6,7 +6,9 @@
     <%= link_to t(".rails_href"), Settings.home.tutorial_ruby_on_rails,target: :_blank %>
     <%= t(".main_page_last") %>
   </h2>
-  <%= link_to t(".button_title"), signup_path, class: "btn btn-lg btn-primary" %>
+  <% unless logged_in? %>
+    <%= link_to t(".button_title"), signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
 <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
   Settings.home.tutorial_rails, target: :_blank %>
