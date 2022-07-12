@@ -1,33 +1,42 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helper:
+    application_helper:
+      base_title: "Program teach how to using Rails"
+  static_pages:
+    home:
+      title: "Sample App"
+      provide_title: "Main Page"
+      main_page_first: "This is main page of"
+      main_page_last: "Sample App"
+      rails_href: "registration tutorial"
+      button_title: "Register now!"
+      welcome: "Welcome to Sample App"
+    help:
+      help: "Help"
+      provide_title: "Help"
+      main_page_first: "Receive some help about"
+      main_page_last: "To get help about this sample application, please see"
+      rails_help: "Rails Help Guide"
+      rails_book: "Ruby on Rails Guidebook"
+    contact:
+      contact: "Contact"
+      contact_content: "More information, contact us"
+      contact_target: "Tutorial web"
+  users:
+    new:
+        new_title: "Register"
+        new_header: "Register Form"
+        new_content: "Comming soon!!!"
+  layouts:
+    header:
+      title: "Sample App"
+      home: "Main page"
+      help: "Help"
+      login: "Login"
+    application:
+      base_title: "Program teach how to using Rails"
+    footer:
+      footer_info: "Ruby on Rails Tutorial"
+      about: "About"
+      contact: "Contact"
+      news: "News"

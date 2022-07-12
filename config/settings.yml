@@ -1,0 +1,11 @@
+footer:
+  tutorial: "https://www.railstutorial.org/"
+  author: "https://www.michaelhartl.com/"
+contact:
+  tutorial_contact: "https://www.railstutorial.org/contact"
+help:
+  tutorial_help: "http://www.railstutorial.org/help"
+  tutorial_book: "http://www.railstutorial.org/book"
+home:
+  tutorial_rails: "https://www.railstutorial.org/"
+  tutorial_ruby_on_rails: "https://rubyonrails.org/"
