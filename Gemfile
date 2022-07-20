@@ -16,9 +16,9 @@ gem "rails-i18n"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
-gem "pry-rails"
 group :development, :test do
   gem "byebug", platforms: %i(mri mingw x64_mingw)
+  gem "pry-rails"
 end
 
 group :development do

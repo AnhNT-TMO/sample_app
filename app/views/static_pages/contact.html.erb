@@ -1,6 +1,6 @@
-<% provide(:title, "Contact") %>
-<h1><%= t(".contact") %></h1>
+<% provide :title, t(".contact") %>
+<h1><%= t ".contact" %></h1>
 <p>
-  <%= t(".contact_content") %>
+  <%= t ".contact_content" %>
   <%= link_to t(".contact_target"), Settings.contact.tutorial_contact, target: :_blank %>
 </p>

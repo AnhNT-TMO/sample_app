@@ -24,9 +24,18 @@ en:
       contact_target: "Tutorial web"
   users:
     new:
-        new_title: "Register"
-        new_header: "Register Form"
-        new_content: "Comming soon!!!"
+      new_title: "Register"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      confirm_password: "Confirm Password"
+      create_button: "Create my account"
+    show:
+      profile: "Profile"
+      alert_user: "Cannot find user"
+    create:
+      alert_not_save: "User cannot save"
+      alert: "Welcome to Sample App"
   layouts:
     header:
       title: "Sample App"
@@ -40,3 +49,6 @@ en:
       about: "About"
       contact: "Contact"
       news: "News"
+  shared:
+    error_messages:
+      form_contain: "The form contains"
