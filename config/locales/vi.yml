@@ -1,4 +1,9 @@
 vi:
+  controller:
+    users_controller:
+      alert: "Chào mừng bạn tới Sample App"
+    sessions_controller:
+      alert: "Invalid_email_password_combination"
   helper:
     application_helper:
       base_title: "Ứng dụng mẫu hướng dẫn Ruby On Rails"
@@ -42,6 +47,9 @@ vi:
       home: "Trang chủ"
       help: "Trợ giúp"
       login: "Đăng nhập"
+      profile: "Thông tin"
+      settings: "Cài đặt"
+      log_out: "Đăng xuất"
     application:
       base_title: "Ứng dụng mẫu hướng dẫn Ruby On Rails"
     footer:
@@ -49,6 +57,11 @@ vi:
       about: "Về chúng tôi"
       contact: "Liên hệ"
       news: "Tin tức"
-  shared:
-    error_messages:
-      form_contain: "Form chứa"
+  sessions:
+    new:
+      login: "Đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
+      submit: "Đăng nhập"
+      sign_up: "Đăng ký ngay!"
+      new_user: "Người mới? "

@@ -1,4 +1,9 @@
 en:
+  controller:
+    users_controller:
+      alert: "Welcome to Sample App"
+    sessions_controller:
+      alert: "Invalid_email_password_combination"
   helper:
     application_helper:
       base_title: "Program teach how to using Rails"
@@ -42,6 +47,9 @@ en:
       home: "Main page"
       help: "Help"
       login: "Login"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
     application:
       base_title: "Program teach how to using Rails"
     footer:
@@ -49,6 +57,11 @@ en:
       about: "About"
       contact: "Contact"
       news: "News"
-  shared:
-    error_messages:
-      form_contain: "The form contains"
+  sessions:
+    new:
+      login: "Log in"
+      email: "Email"
+      password: "Password"
+      submit: "Log in"
+      sign_up: "Sign up now!"
+      new_user: "New User? "

@@ -6,8 +6,7 @@ class SessionsController < ApplicationController
   def create
     if @user&.authenticate params[:session][:password]
       log_in @user
-      params[:session][:remember_me] == "1" ? remember(@user) : forget(@user)
-      redirect_to @root_path
+      redirect_to root_path
     else
       flash.now[:danger] = t ".alert"
       render :new
