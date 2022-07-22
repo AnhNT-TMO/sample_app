@@ -11,6 +11,7 @@
 /log/*
 /tmp/*
 /test/*
+/.vscode/*
 !/log/.keep
 !/tmp/.keep
 
