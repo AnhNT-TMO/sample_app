@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
 
+  scope :order_by, ->(field, sort_by){order("#{field} #{sort_by}")}
+
   UPDATABLE_ATTRS = %i(name email password password_confirmation).freeze
 
   before_save :downcase_email
@@ -10,7 +12,8 @@ class User < ApplicationRecord
     length: {minium: Settings.user.email_min, maximum: Settings.user.email_max},
     format: {with: Settings.user.email_regex},
     uniqueness: {case_sensitive: false}
-  validates :password, presence: true, length: {minimum: Settings.user.pass_min}
+  validates :password, presence: true,
+    length: {minimum: Settings.user.pass_min}, if: :password
 
   has_secure_password
 
