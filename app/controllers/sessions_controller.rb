@@ -5,9 +5,14 @@ class SessionsController < ApplicationController
 
   def create
     if @user&.authenticate params[:session][:password]
-      log_in @user
-      remember @user
-      redirect_to root_path
+      if @user.activated?
+        log_in @user
+        remember @user
+        redirect_to root_path
+      else
+        flash[:warning] = t ".denied_account"
+        redirect_to login_path
+      end
     else
       flash.now[:danger] = t ".alert"
       render :new
