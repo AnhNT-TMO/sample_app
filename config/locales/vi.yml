@@ -1,7 +1,8 @@
 vi:
   auths:
     mail:
-      subject: "Welcome! This is email to confirm register"
+      subject: "Chào mừng bạn! Email này dành cho người mới"
+      password_reset_subject: "Reset mật khẩu"
   controller:
     users_controller:
       alert: "Chào mừng bạn tới Sample App"
@@ -15,6 +16,7 @@ vi:
       hello: "Xin chào: "
       content: "Chào mừng bạn đến với ứng dụng mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
       title: "Sample App"
+      activation_button: "Kích hoạt"
     password_reset:
       title: "Reset mật khẩu"
       subject: "Để reset password của bạn, click vào link dưới đây:"
@@ -107,6 +109,16 @@ vi:
       title: "Quên mật khẩu"
       email: "Email"
       submit: "Gửi"
+    create:
+      info_mail: "Kiểm tra mail nha!"
+      not_found: "Không tìm thấy email này"
+    edit:
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      reset_password_title: "Cập nhật mật khẩu"
+      update_password_button: "Cập Nhật"
+    update:
+      success_reset: "Cập nhật mật khẩu thành công"
   account_activations:
     edit:
       activate_success: "Xác minh thành công, vui lòng đăng nhập"

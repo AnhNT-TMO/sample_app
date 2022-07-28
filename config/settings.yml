@@ -16,6 +16,7 @@ user:
   email_max: 255
   pass_min: 6
   gavatar_size: 50
+  mail_expired: 2
 edit:
   avatar: "https://en.gravatar.com"
 index:
