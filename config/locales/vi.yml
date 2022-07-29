@@ -123,3 +123,27 @@ vi:
     edit:
       activate_success: "Xác minh thành công, vui lòng đăng nhập"
       activation_button: "Xác minh"
+  microposts:
+    micropost:
+      posted: "Đăng"
+      ago: "trước"
+      confirm_delete: "Đồng ý xóa?"
+    destroy:
+      success_destroy: "Xóa bài viết thành công"
+    create:
+      create_success: "Tạo thành công"
+  shared:
+    user_info:
+      user_info_profile: "Xem profile của tôi"
+      micropost: "bài viết"
+    micropost_form:
+      compose: "Viết micropost mới ..."
+      submit: "Gửi"
+  activerecord:
+    errors:
+      models:
+        micropost:
+          attributes:
+            image:
+              too_big: "Kích thước ảnh quá to"
+              wrong_format: "Phải đúng định dạng ảnh img/gif/png"

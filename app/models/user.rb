@@ -1,10 +1,9 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
   attr_accessor :remember_token, :activation_token, :reset_token
 
   before_save :downcase_email
   before_create :create_activation_digest
-
-  scope :order_by, ->(field, sort_by){order("#{field} #{sort_by}")}
 
   UPDATABLE_ATTRS = %i(name email password password_confirmation).freeze
   PASSWORD_RESET_ATTRS = %i(password password_confirmation).freeze
@@ -19,6 +18,8 @@ class User < ApplicationRecord
     uniqueness: {case_sensitive: false}
   validates :password, presence: true,
     length: {minimum: Settings.user.pass_min}, if: :password
+
+  scope :order_by, ->(sort_by){order("id #{sort_by}")}
 
   has_secure_password
 
@@ -55,6 +56,10 @@ class User < ApplicationRecord
 
   def activate
     update activated: true, activated_at: Time.zone.now
+  end
+
+  def feed
+    microposts.newest
   end
 
   def send_activation_email

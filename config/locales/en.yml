@@ -122,3 +122,27 @@ en:
   account_activations:
     edit:
       activate_success: "Congtulations, please log in"
+  microposts:
+    micropost:
+      posted: "Posted"
+      ago: "ago"
+      confirm_delete: "Confirm delete?"
+    destroy:
+      success_destroy: "Micropost deleted"
+    create:
+      create_success: "Create success"
+  shared:
+    user_info:
+      user_info_profile: "View my profile"
+      micropost: "micropost"
+    micropost_form:
+      compose: "Compose new micropost..."
+      submit: "Submit"
+  activerecord:
+    errors:
+      models:
+        micropost:
+          attributes:
+            image:
+              too_big: "Img size is too big"
+              wrong_format: "must be vaid image format"

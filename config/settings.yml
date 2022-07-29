@@ -20,6 +20,13 @@ user:
 edit:
   avatar: "https://en.gravatar.com"
 index:
-  items: 30
+  items: 10
+micropost:
+  image_path: <% %w(image/jpeg image/gif image/png) %>
+  accept_path: "image/jpeg,image/gif,image/png"
+  max_length: 140
+  gavartar_size: 50
+  resize_to_limit: [500, 500]
+  less_than: 5
 user_helper:
   gavartar_size: 80

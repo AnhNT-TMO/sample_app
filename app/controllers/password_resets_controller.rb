@@ -2,6 +2,7 @@ class PasswordResetsController < ApplicationController
   before_action :find_password_reset_user, only: :create
   before_action :find_user, :valid_user, :check_expiration,
                 only: %i(edit update)
+  before_action :check_params_user_password, only: :update
 
   def new; end
 
@@ -13,10 +14,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def update
-    if params[:user][:password].empty?
-      @user.errors.add :password, t(".cant_empty")
-      render :edit
-    elsif @user.update user_params
+    if @user.update user_params
       flash[:success] = t ".success_reset"
       redirect_to login_path
     else
@@ -61,5 +59,12 @@ class PasswordResetsController < ApplicationController
 
   def user_params
     params.require(:user).permit(User::PASSWORD_RESET_ATTRS)
+  end
+
+  def check_params_user_password
+    return unless params[:user][:password].blank?
+
+    @user.errors.add :password, t(".cant_empty")
+    render :edit
   end
 end
