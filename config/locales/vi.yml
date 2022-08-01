@@ -75,6 +75,16 @@ vi:
       update_message: "Đã thay đổi!"
     create:
       alert: "Kiểm tra mail của bạn nha!!!"
+    unfollow:
+      unfollow: "Bỏ theo dõi"
+    follow:
+      follow: "Theo dõi"
+    show_follow:
+      show_follow_title: "Xem follow"
+    following:
+      following_title: "Xem Following"
+    followers:
+      follower_title: "Xem Follower"
   layouts:
     header:
       title: "Sample App"

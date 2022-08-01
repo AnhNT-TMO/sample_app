@@ -1,0 +1,5 @@
+<%= form_for(load_following,
+  html: { method: :delete }, remote: true) do |f| %>
+
+  <%= f.submit t(".unfollow"), class: "btn" %>
+<% end %>
